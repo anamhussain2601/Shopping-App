@@ -50,8 +50,11 @@ function store() {
 }
 store.prototype.getProduct = function (sku) {
     for (var i = 0; i < this.products.length; i++) {
-        if (this.products[i].sku == sku)
+        if (this.products[i].sku == sku) {
+            console.log(this.products[i])
             return this.products[i];
+
+        }
     }
     return null;
 }
